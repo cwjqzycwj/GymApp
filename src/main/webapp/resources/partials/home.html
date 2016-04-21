@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="jumbotron text-center">
+            <h1>My Gym</h1>
+        </div>
+        <div class="col-md-6" ng-controller="EmployeeController">
+            <h2 class="text-center">Gym Employees</h2>
+            <div class="table-responsive table-bordered table-strip">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Employee Number</th>
+                        <th>Phone Number</th>
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="employee in employees">
+                        <td>{{employee.firstName}}</td>
+                        <td>{{employee.lastName}}</td>
+                        <td>{{employee.employeeNumber}}</td>
+                        <td>{{employee.phoneNumber}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <div class="text-center">
+                <a href="#/employees" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right \"></span>Edit Employees</a>
+            </div>
+        </div>
+        <div class="col-md-6" ng-controller="MemberController">
+            <h2 class="text-center">Gym Members</h2>
+            <div class="table-responsive table-bordered table-striped">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="member in members">
+                        <td>{{member.firstName}}</td>
+                        <td>{{member.lastName}}</td>
+                        <td>{{member.phoneNumber}}</td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <div class="text-center">
+                <a href="#/members" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-right \"></span>Edit Members</a>
+            </div>
+        </div>
+    </div>
+</div>
